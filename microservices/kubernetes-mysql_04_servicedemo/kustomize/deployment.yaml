@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicedemo
+  labels:
+    app: servicedemo
+spec:
+  selector:
+    matchLabels:
+      app: servicedemo
+      tier: servicedemo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: servicedemo
+        tier: servicedemo
+    spec:
+      containers:
+      - image: servicedemo:1.0.0
+        name: servicedemo
+        imagePullPolicy: Never
+        env:
+        - name: MYSQL_HOST
+          value: mysql
+        - name: MYSQL_DATABASE
+          value: demo
+        - name: MYSQL_USER
+          value: demo
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-pass
+              key: password
+        ports:
+        - containerPort: 8080
+          name: servicedemo
