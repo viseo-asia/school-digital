@@ -25,7 +25,7 @@ setInterval(() => {
     component = components[components.length - i - 1];
     if (new Date() - component.date > 20000) {
       console.log(`Component unregistered: ${component.id}`);
-      components.splice(i, 1);
+      components.splice(components.length - i - 1, 1);
     }
   }
 }, 1000);
