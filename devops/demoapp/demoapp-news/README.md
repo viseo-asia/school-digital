@@ -13,4 +13,4 @@ APP_NAME=`jq -r '.name' package.json` && \
         | kubectl apply -n ${NAMESPACE} -f -
 ```
 
-test
+test 1
