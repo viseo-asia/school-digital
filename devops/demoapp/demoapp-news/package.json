@@ -1,0 +1,11 @@
+{
+  "name": "demoapp-news",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "eleventy --serve"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
