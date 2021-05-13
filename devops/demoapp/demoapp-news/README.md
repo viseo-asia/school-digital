@@ -12,5 +12,3 @@ APP_NAME=`jq -r '.name' package.json` && \
         | sed "s@\\\${REGISTRY_NAMESPACE}/@@g" \
         | kubectl apply -n ${NAMESPACE} -f -
 ```
-
-
