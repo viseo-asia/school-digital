@@ -1,3 +1,0 @@
-# News
-
-Everything OK today
