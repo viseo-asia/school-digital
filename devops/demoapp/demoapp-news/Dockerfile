@@ -1,7 +1,7 @@
 # Builder
 FROM node:14-alpine
 
-RUN apk add bash curl jq fdkghjkdfhgjkdfhjkgfvd
+RUN apk add bash curl jq
 
 COPY . /app
 
